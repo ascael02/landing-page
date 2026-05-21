@@ -977,6 +977,8 @@
     position: relative;
     overflow: hidden;
     aspect-ratio: 4/3;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(20, 19, 16, 0.14);
   }
 
   .result-img-card img {
@@ -993,11 +995,11 @@
   .result-img-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(28,26,18,0.75) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(22, 20, 15, 0.8) 0%, rgba(22, 20, 15, 0.25) 48%, transparent 80%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .result-img-title {
