@@ -372,34 +372,36 @@
   <div class="cta-form">
     <h3 class="form-title">Réserver ma séance gratuite</h3>
     <p class="form-subtitle">Réponse garantie sous 24 heures ouvrées</p>
+    <form id="contact-form" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="full-name">Prénom et Nom</label>
+        <input id="full-name" name="fullName" type="text" class="form-input" placeholder="Sophie Martin" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Adresse email</label>
+        <input id="email" name="email" type="email" class="form-input" placeholder="sophie@exemple.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="need">Quel est votre besoin principal ?</label>
+        <select id="need" name="need" class="form-select" required>
+          <option value="" disabled selected>Choisissez une option</option>
+          <option>Confiance en soi</option>
+          <option>Gestion du stress</option>
+          <option>Reconversion professionnelle</option>
+          <option>Relations et communication</option>
+          <option>Equilibre vie pro / perso</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Parlez-moi de vous (optionnel)</label>
+        <textarea id="message" name="message" class="form-input" rows="3" placeholder="Où en êtes-vous aujourd'hui ? Qu'est-ce qui vous a amené ici ?"></textarea>
+      </div>
 
-    <div class="form-group">
-      <label class="form-label">Prénom et Nom</label>
-      <input type="text" class="form-input" placeholder="Sophie Martin">
-    </div>
-    <div class="form-group">
-      <label class="form-label">Adresse email</label>
-      <input type="email" class="form-input" placeholder="sophie@exemple.com">
-    </div>
-    <div class="form-group">
-      <label class="form-label">Quel est votre besoin principal ?</label>
-      <select class="form-select">
-        <option value="" disabled selected>Choisissez une option</option>
-        <option>Confiance en soi</option>
-        <option>Gestion du stress</option>
-        <option>Reconversion professionnelle</option>
-        <option>Relations et communication</option>
-        <option>Equilibre vie pro / perso</option>
-        <option>Autre</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label class="form-label">Parlez-moi de vous (optionnel)</label>
-      <textarea class="form-input" rows="3" placeholder="Où en êtes-vous aujourd'hui ? Qu'est-ce qui vous a amené ici ?"></textarea>
-    </div>
-
-    <button class="form-submit">Réserver ma séance gratuite</button>
-    <p class="form-note">100% confidentiel — Vos données ne sont jamais partagées</p>
+      <button type="submit" class="form-submit">Réserver ma séance gratuite</button>
+      <p class="form-note">100% confidentiel — Vos données ne sont jamais partagées</p>
+      <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 
@@ -414,43 +416,43 @@
 
     <div class="faq-list">
       <div class="faq-item open">
-        <div class="faq-question" onclick="toggleFaq(this)">
+        <button type="button" class="faq-question" aria-expanded="true" aria-controls="faq-answer-1" onclick="toggleFaq(this)">
           Comment se déroule la séance découverte ?
           <span class="faq-toggle">+</span>
-        </div>
-        <p class="faq-answer">La séance découverte est un échange de 30 minutes en visioconférence, entièrement gratuit. C'est l'occasion pour vous de me parler de votre situation, de vos attentes, et pour moi de vous présenter comment je pourrais vous accompagner. Sans engagement de votre part.</p>
+        </button>
+        <p class="faq-answer" id="faq-answer-1">La séance découverte est un échange de 30 minutes en visioconférence, entièrement gratuit. C'est l'occasion pour vous de me parler de votre situation, de vos attentes, et pour moi de vous présenter comment je pourrais vous accompagner. Sans engagement de votre part.</p>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" onclick="toggleFaq(this)">
           Les séances se déroulent-elles en présentiel ou en ligne ?
           <span class="faq-toggle">+</span>
-        </div>
-        <p class="faq-answer">La plupart des séances se déroulent en ligne via Zoom ou Google Meet. Je peux également recevoir en cabinet à Paris sur rendez-vous. Les deux formats offrent des résultats tout aussi efficaces.</p>
+        </button>
+        <p class="faq-answer" id="faq-answer-2">La plupart des séances se déroulent en ligne via Zoom ou Google Meet. Je peux également recevoir en cabinet à Paris sur rendez-vous. Les deux formats offrent des résultats tout aussi efficaces.</p>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" onclick="toggleFaq(this)">
           En combien de temps voit-on des résultats ?
           <span class="faq-toggle">+</span>
-        </div>
-        <p class="faq-answer">Les premiers changements sont souvent perceptibles dès la 2e ou 3e séance. Une transformation profonde et durable demande généralement 3 à 6 mois d'accompagnement. Tout dépend de vos objectifs et de votre engagement dans le processus.</p>
+        </button>
+        <p class="faq-answer" id="faq-answer-3">Les premiers changements sont souvent perceptibles dès la 2e ou 3e séance. Une transformation profonde et durable demande généralement 3 à 6 mois d'accompagnement. Tout dépend de vos objectifs et de votre engagement dans le processus.</p>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" onclick="toggleFaq(this)">
           Puis-je changer de programme en cours de route ?
           <span class="faq-toggle">+</span>
-        </div>
-        <p class="faq-answer">Absolument. Si vous commencez par le programme Réveil Intérieur et souhaitez approfondir avec la Transformation Profonde, le montant déjà réglé est déduit du nouveau programme. Votre évolution est ma priorité.</p>
+        </button>
+        <p class="faq-answer" id="faq-answer-4">Absolument. Si vous commencez par le programme Réveil Intérieur et souhaitez approfondir avec la Transformation Profonde, le montant déjà réglé est déduit du nouveau programme. Votre évolution est ma priorité.</p>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" onclick="toggleFaq(this)">
           Le coaching est-il remboursé par la sécurité sociale ?
           <span class="faq-toggle">+</span>
-        </div>
-        <p class="faq-answer">Le coaching n'est pas remboursé par la sécurité sociale. Cependant, certaines mutuelles et entreprises (via le CPF ou le plan de formation) peuvent prendre en charge tout ou partie des frais. Je vous fournis une facture officielle pour toute démarche.</p>
+        </button>
+        <p class="faq-answer" id="faq-answer-5">Le coaching n'est pas remboursé par la sécurité sociale. Cependant, certaines mutuelles et entreprises (via le CPF ou le plan de formation) peuvent prendre en charge tout ou partie des frais. Je vous fournis une facture officielle pour toute démarche.</p>
       </div>
     </div>
   </div>

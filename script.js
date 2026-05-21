@@ -1,8 +1,17 @@
-ï»¿function toggleFaq(el) {
+function toggleFaq(el) {
   const item = el.parentElement;
   const allItems = document.querySelectorAll('.faq-item');
-  allItems.forEach(i => { if (i !== item) i.classList.remove('open'); });
-  item.classList.toggle('open');
+
+  allItems.forEach(i => {
+    if (i !== item) {
+      i.classList.remove('open');
+      const btn = i.querySelector('.faq-question');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  const isOpen = item.classList.toggle('open');
+  el.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -31,6 +40,51 @@ if (nav && navToggle) {
       navToggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  document.addEventListener('click', e => {
+    if (!nav.contains(e.target)) {
+      nav.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      nav.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+const contactForm = document.querySelector('#contact-form');
+const formFeedback = document.querySelector('#form-feedback');
+
+if (contactForm && formFeedback) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    formFeedback.className = 'form-feedback';
+
+    const fullName = contactForm.querySelector('#full-name');
+    const email = contactForm.querySelector('#email');
+    const need = contactForm.querySelector('#need');
+
+    if (!fullName.value.trim() || !email.value.trim() || !need.value) {
+      formFeedback.textContent = 'Merci de remplir les champs obligatoires.';
+      formFeedback.classList.add('error');
+      return;
+    }
+
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    if (!emailOk) {
+      formFeedback.textContent = 'Merci de renseigner une adresse email valide.';
+      formFeedback.classList.add('error');
+      return;
+    }
+
+    formFeedback.textContent = 'Merci, votre demande est prête. Nous vous répondrons sous 24h ouvrées.';
+    formFeedback.classList.add('success');
+    contactForm.reset();
+  });
 }
 
 function initAutoCarousel(selector, intervalMs = 5000) {
@@ -38,10 +92,11 @@ function initAutoCarousel(selector, intervalMs = 5000) {
   if (!track) return;
 
   const isMobile = window.matchMedia('(max-width: 768px)');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let timer = null;
 
   const start = () => {
-    if (!isMobile.matches) return;
+    if (!isMobile.matches || prefersReducedMotion.matches) return;
     stop();
     timer = setInterval(() => {
       const step = Math.max(160, Math.floor(track.clientWidth * 0.75));
@@ -66,6 +121,11 @@ function initAutoCarousel(selector, intervalMs = 5000) {
   isMobile.addEventListener('change', () => {
     if (isMobile.matches) start();
     else stop();
+  });
+
+  prefersReducedMotion.addEventListener('change', () => {
+    if (prefersReducedMotion.matches) stop();
+    else start();
   });
 
   start();

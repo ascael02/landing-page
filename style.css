@@ -1071,6 +1071,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
     font-size: 0.92rem;
     font-weight: 400;
     color: var(--charcoal);
@@ -1097,6 +1103,23 @@
 
   .faq-item.open .faq-answer { max-height: 200px; padding-top: 1rem; }
   .faq-item.open .faq-toggle { transform: rotate(45deg); }
+  .form-feedback {
+    font-size: 0.78rem;
+    margin-top: 0.85rem;
+    min-height: 1.2em;
+    color: var(--stone-light);
+  }
+  .form-feedback.error { color: #f0b3b3; }
+  .form-feedback.success { color: #d7e9c7; }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
 
   /* FOOTER */
   footer {
@@ -1229,7 +1252,7 @@
       width: 100%;
       padding: 0.82rem 0.95rem;
       border-radius: 10px;
-      font-size: 0.72rem;
+      font-size: 0.85rem;
       letter-spacing: 0.12em;
     }
     .nav-links a:hover {
@@ -1244,7 +1267,7 @@
     .hero-left { padding: 4.5rem 1.25rem 2.5rem; }
     .hero-right { min-height: 320px; }
     .hero-badge {
-      font-size: 0.64rem;
+      font-size: 0.78rem;
       letter-spacing: 0.16em;
       margin-bottom: 1.25rem;
     }
@@ -1328,7 +1351,7 @@
       -webkit-overflow-scrolling: touch;
     }
     .section-label {
-      font-size: 0.62rem;
+      font-size: 0.78rem;
       letter-spacing: 0.16em;
       gap: 0.65rem;
     }
@@ -1370,7 +1393,7 @@
       gap: 0.45rem;
     }
     .footer-copy {
-      font-size: 0.68rem;
+      font-size: 0.78rem;
     }
     .footer-bottom {
       flex-direction: column;
@@ -1434,5 +1457,14 @@
     }
     .result-img-sub {
       font-size: 0.62rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
   }
