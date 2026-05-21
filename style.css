@@ -89,6 +89,7 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 0;
   }
   .nav-toggle span {
