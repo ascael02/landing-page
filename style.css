@@ -334,23 +334,31 @@
   }
 
   /* MANIFESTO STRIP */
-  .manifesto-strip {
-    background: linear-gradient(90deg, #1C1C1A 0%, #2E2820 40%, #252018 70%, #1C1C1A 100%);
-    padding: 2rem 7rem;
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    overflow: hidden;
-  }
+.manifesto-strip {
+  background: linear-gradient(90deg, #1C1C1A 0%, #2E2820 40%, #252018 70%, #1C1C1A 100%);
+  padding: 2rem 7rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
 
-  .manifesto-strip p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--gold-light);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+.manifesto-strip p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--gold-light);
+  white-space: nowrap;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
 
   .manifesto-divider {
     width: 40px;
@@ -904,16 +912,16 @@
   }
 
   /* TRUST STRIP */
-  .trust-strip {
-    background: linear-gradient(90deg, #FAF8F4 0%, #F5EFE2 50%, #FAF8F4 100%);
-    padding: 2rem 7rem;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    border-top: 1px solid var(--gold-light);
-    border-bottom: 1px solid var(--gold-light);
-    overflow-x: auto;
-  }
+.trust-strip {
+  background: linear-gradient(90deg, #FAF8F4 0%, #F5EFE2 50%, #FAF8F4 100%);
+  padding: 2rem 7rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid var(--gold-light);
+  border-bottom: 1px solid var(--gold-light);
+  overflow: hidden;
+}
 
   .trust-label {
     font-size: 0.68rem;
@@ -924,12 +932,16 @@
     flex-shrink: 0;
   }
 
-  .trust-logos {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
+.trust-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
 
   .trust-logo-item {
     opacity: 0.6;
@@ -940,14 +952,20 @@
 
   .trust-logo-item img { height: 28px; width: auto; filter: grayscale(100%); }
 
-  .trust-text-logo {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--charcoal-mid);
-    font-weight: 500;
-    white-space: nowrap;
-  }
+.trust-text-logo {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-mid);
+  font-weight: 500;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border: 1px solid rgba(201, 169, 110, 0.28);
+  border-radius: 999px;
+  padding: 0.38rem 0.7rem;
+  background: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+}
 
   .trust-divider {
     width: 1px;
@@ -1308,62 +1326,11 @@
       padding-left: 1rem;
       padding-right: 1rem;
     }
-    .manifesto-strip {
-      display: flex;
-      gap: 0.75rem;
-      padding: 1rem 1.25rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
-    .manifesto-strip p {
-      flex: 0 0 auto;
-      scroll-snap-align: center;
-      font-size: 0.95rem;
-      padding: 0.4rem 0.9rem;
-      border: 1px solid rgba(201, 169, 110, 0.35);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-    }
-    .manifesto-divider {
-      display: none;
-    }
-
+    .manifesto-strip,
     .trust-strip {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.9rem;
-      padding: 1rem 1.25rem;
-      overflow: hidden;
-    }
-    .trust-label {
-      font-size: 0.62rem;
-      letter-spacing: 0.14em;
-    }
-    .trust-logos {
-      width: 100%;
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 0.75rem;
+      gap: 1.25rem;
       overflow-x: auto;
-      scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      padding-bottom: 0.2rem;
-    }
-    .trust-text-logo {
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      font-size: 0.66rem;
-      letter-spacing: 0.08em;
-      border: 1px solid rgba(201, 169, 110, 0.28);
-      border-radius: 999px;
-      padding: 0.38rem 0.7rem;
-      background: rgba(255, 255, 255, 0.5);
-      white-space: nowrap;
-    }
-    .trust-divider {
-      display: none;
     }
     .section-label {
       font-size: 0.62rem;
