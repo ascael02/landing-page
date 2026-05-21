@@ -1302,6 +1302,18 @@
       font-size: 0.68rem;
       letter-spacing: 0.08em;
     }
+    .testimonials-header {
+      margin-bottom: 3rem;
+    }
+    .testimonials-header .section-label {
+      justify-content: center;
+    }
+    .testimonials-header .section-title {
+      text-align: center;
+    }
+    .testimonials-header .section-title br {
+      display: none;
+    }
     .process-step,
     .service-card,
     .testimonial-card {
@@ -1425,9 +1437,3 @@
       font-size: 0.62rem;
     }
   }
-    .testimonials-header .section-label {
-      justify-content: center;
-    }
-    .testimonials-header .section-title {
-      text-align: center;
-    }
