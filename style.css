@@ -1415,8 +1415,6 @@
     }
     .result-img-overlay {
       padding: 0.9rem;
-      width: calc(100% - 1.8rem);
-      height: calc(100% - 1.8rem);
     }
     .result-img-title {
       font-size: 0.92rem;
