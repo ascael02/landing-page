@@ -1325,6 +1325,7 @@
       text-align: center;
       scroll-snap-align: start;
       border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 999px;
       padding: 0.85rem 1rem;
       background: rgba(255, 255, 255, 0.03);
     }
@@ -1349,6 +1350,7 @@
       min-width: calc(100vw - 4rem);
       scroll-snap-align: start;
       border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 999px;
       padding: 0.85rem 1rem;
       text-align: center;
       background: rgba(255, 255, 255, 0.25);
