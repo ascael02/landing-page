@@ -640,7 +640,7 @@
     top: 0; right: 0;
     width: 45%;
     height: 100%;
-    background: url('images/ctabg.jpeg') center/cover no-repeat;
+    background: url('images/ctabg.webp') center/cover no-repeat;
     opacity: 0.06;
     pointer-events: none;
   }
@@ -1242,4 +1242,5 @@
     }
     .cta-form { padding: 1.5rem 1rem; }
   }
+
 
