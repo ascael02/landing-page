@@ -1204,6 +1204,44 @@
 
   @media (max-width: 1024px) {
     nav { padding: 1.25rem 2rem; }
+    .nav-toggle {
+      display: inline-flex;
+    }
+    .nav-links {
+      position: absolute;
+      top: calc(100% + 0.7rem);
+      left: 0.8rem;
+      right: 0.8rem;
+      display: none;
+      flex-direction: column;
+      gap: 0.2rem;
+      background: linear-gradient(165deg, rgba(250, 248, 244, 0.98) 0%, rgba(244, 238, 226, 0.98) 100%);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 16px;
+      box-shadow: 0 16px 34px rgba(18, 18, 16, 0.16);
+      padding: 0.7rem;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+    }
+    nav.nav-open .nav-links { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+      display: block;
+      width: 100%;
+      padding: 0.82rem 0.95rem;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      letter-spacing: 0.11em;
+    }
+    .nav-links a:hover {
+      background: rgba(201, 169, 110, 0.12);
+    }
+    .nav-cta {
+      margin: 0.35rem 0.2rem 0.1rem;
+      text-align: center;
+      display: block;
+      border-radius: 999px;
+    }
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 5rem 2rem 3rem; }
     .hero-left::before { display: none; }
