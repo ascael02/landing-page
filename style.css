@@ -1458,6 +1458,9 @@
     .result-img-sub {
       font-size: 0.62rem;
     }
+    .nav-cta {
+      border-radius: 999px;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
