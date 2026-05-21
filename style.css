@@ -1425,3 +1425,9 @@
       font-size: 0.62rem;
     }
   }
+    .testimonials-header .section-label {
+      justify-content: center;
+    }
+    .testimonials-header .section-title {
+      text-align: center;
+    }
