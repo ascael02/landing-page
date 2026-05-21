@@ -1203,6 +1203,8 @@
       border-radius: 16px;
       box-shadow: 0 16px 34px rgba(18, 18, 16, 0.16);
       padding: 0.7rem;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
     }
     nav.nav-open .nav-links { display: flex; }
     .nav-links li { width: 100%; }
@@ -1242,6 +1244,19 @@
       font-size: 0.88rem;
       line-height: 1.7;
       margin-bottom: 1.8rem;
+      max-width: 100%;
+    }
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+      width: 100%;
+      text-align: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
     .hero-stats {
       flex-direction: column;
@@ -1270,7 +1285,12 @@
       border-radius: 14px;
       box-shadow: 0 10px 24px rgba(20, 19, 16, 0.14);
     }
-    .result-img-card img { filter: grayscale(8%); }
+    .result-img-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: grayscale(8%);
+    }
     .result-img-overlay {
       padding: 1rem;
       background: linear-gradient(to top, rgba(22, 20, 15, 0.8) 0%, rgba(22, 20, 15, 0.25) 48%, transparent 80%);
@@ -1292,6 +1312,8 @@
     .manifesto-strip,
     .trust-strip {
       gap: 1.25rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .section-label {
       font-size: 0.62rem;
@@ -1359,6 +1381,14 @@
     .about-section, .services-section, .process-section, .testimonials-section, .cta-section, .faq-section {
       padding: 3.2rem 1rem;
     }
+    .about-years-badge {
+      width: 80px;
+      height: 80px;
+      top: -1rem;
+      left: -1rem;
+    }
+    .about-years-badge .num { font-size: 1.5rem; }
+    .about-years-badge .label { font-size: 0.52rem; }
     .section-title {
       font-size: 1.55rem;
     }
