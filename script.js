@@ -71,5 +71,5 @@ function initAutoCarousel(selector, intervalMs = 5000) {
   start();
 }
 
-initAutoCarousel('.manifesto-strip', 5000);
-initAutoCarousel('.trust-logos', 5000);
+initAutoCarousel('.manifesto-strip', 500);
+initAutoCarousel('.trust-logos', 500);
