@@ -1246,33 +1246,9 @@
     .services-grid,
     .process-steps,
     .testimonials-grid,
+    .results-grid,
     footer {
       grid-template-columns: 1fr;
-    }
-    .results-grid {
-      display: flex;
-      gap: 0.9rem;
-      overflow-x: auto;
-      padding: 0.25rem 0.15rem 0.75rem;
-      margin: 0 -0.15rem;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: thin;
-    }
-    .result-img-card {
-      flex: 0 0 82%;
-      aspect-ratio: 4 / 5;
-      scroll-snap-align: start;
-    }
-    .result-img-overlay {
-      padding: 1rem;
-    }
-    .result-img-title {
-      font-size: 1rem;
-    }
-    .result-img-sub {
-      font-size: 0.66rem;
-      letter-spacing: 0.08em;
     }
     .process-step,
     .service-card,
@@ -1367,9 +1343,5 @@
     .hero-decorative-text {
       font-size: 4rem;
       letter-spacing: 0.15em;
-    }
-    .result-img-card {
-      flex-basis: 88%;
-      aspect-ratio: 3 / 4;
     }
   }
