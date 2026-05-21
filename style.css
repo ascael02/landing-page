@@ -1166,6 +1166,16 @@
   .hero-stats { animation: fadeUp 0.7s ease 0.65s both; }
 
   /* RESPONSIVE */
+  @media (min-width: 769px) {
+    .manifesto-strip,
+    .trust-strip {
+      overflow-x: hidden;
+    }
+    .trust-logos {
+      overflow-x: visible;
+    }
+  }
+
   @media (max-width: 1024px) {
     nav { padding: 1.25rem 2rem; }
     .hero { grid-template-columns: 1fr; min-height: auto; }
@@ -1311,6 +1321,7 @@
     .manifesto-strip,
     .trust-strip {
       gap: 1.25rem;
+      overflow-x: auto;
       -webkit-overflow-scrolling: touch;
     }
     .manifesto-strip {
@@ -1319,7 +1330,7 @@
     .manifesto-strip p {
       text-align: center;
       border: 1px solid rgba(201, 169, 110, 0.3);
-      border-radius: 999px;
+      border-radius: 10px;
       padding: 0.85rem 1rem;
       background: rgba(255, 255, 255, 0.03);
     }
@@ -1341,7 +1352,7 @@
     .trust-logo-item {
       min-width: calc(100vw - 4rem);
       border: 1px solid rgba(201, 169, 110, 0.3);
-      border-radius: 999px;
+      border-radius: 10px;
       text-align: center;
       background: rgba(255, 255, 255, 0.25);
       opacity: 1;
