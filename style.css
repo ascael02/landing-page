@@ -1166,6 +1166,16 @@
   .hero-stats { animation: fadeUp 0.7s ease 0.65s both; }
 
   /* RESPONSIVE */
+  @media (min-width: 769px) {
+    .manifesto-strip,
+    .trust-strip {
+      overflow-x: hidden;
+    }
+    .trust-logos {
+      overflow-x: visible;
+    }
+  }
+
   @media (max-width: 1024px) {
     nav { padding: 1.25rem 2rem; }
     .hero { grid-template-columns: 1fr; min-height: auto; }
