@@ -1302,6 +1302,9 @@
       font-size: 0.68rem;
       letter-spacing: 0.08em;
     }
+    .results-header .section-label {
+      white-space: nowrap;
+    }
     .testimonials-header {
       margin-bottom: 3rem;
     }
