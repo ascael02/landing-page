@@ -1275,14 +1275,14 @@
       grid-template-columns: 1fr;
     }
     .results-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
       width: 100%;
       margin: 0;
     }
     .result-img-card {
       width: 100%;
-      aspect-ratio: 4 / 3;
+      height: auto;
       border-radius: 14px;
       box-shadow: 0 10px 24px rgba(20, 19, 16, 0.14);
     }
