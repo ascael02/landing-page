@@ -976,45 +976,46 @@
   .result-img-card {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 4/3;
-    border-radius: 14px;
-    box-shadow: 0 10px 24px rgba(20, 19, 16, 0.14);
+    background: linear-gradient(145deg, #FFFFFF 0%, #FAF8F4 100%);
+    padding: 2.5rem;
+    border-top: 2px solid var(--green-sage);
+    box-shadow: 0 4px 30px rgba(107, 124, 94, 0.08);
   }
 
   .result-img-card img {
     width: 100%;
-    height: 100%;
+    height: 220px;
     object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.6s ease;
-    filter: grayscale(20%);
+    filter: none;
   }
 
   .result-img-card:hover img { transform: scale(1.05); filter: grayscale(0%); }
 
   .result-img-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(22, 20, 15, 0.8) 0%, rgba(22, 20, 15, 0.25) 48%, transparent 80%);
+    position: static;
+    background: transparent;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 1rem;
+    justify-content: flex-start;
+    padding: 1rem 0 0;
   }
 
   .result-img-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--cream);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--charcoal);
     margin-bottom: 0.25rem;
   }
 
   .result-img-sub {
     font-size: 0.72rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--gold-light);
+    color: var(--stone);
   }
 
   /* AMBIENT BACKGROUND IMAGE FOR CTA */
@@ -1280,19 +1281,18 @@
      
     .result-img-card {
       width: 100%;
-      height: 100%;
-      border-radius: 14px;
-      box-shadow: 0 10px 24px rgba(20, 19, 16, 0.14);
+      height: auto;
+      padding: 1rem;
     }
     .result-img-card img {
       width: 100%;
-      height: 100%;
+      height: 200px;
       display: block;
-      filter: grayscale(8%);
+      filter: none;
     }
     .result-img-overlay {
       padding: 1rem;
-      background: linear-gradient(to top, rgba(22, 20, 15, 0.8) 0%, rgba(22, 20, 15, 0.25) 48%, transparent 80%);
+      background: transparent;
     }
     .result-img-title {
       font-size: 1rem;
