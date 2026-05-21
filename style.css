@@ -1267,22 +1267,17 @@
       margin-top: 2.25rem;
       padding-top: 1.5rem;
     }
-    .about-section, .services-section, .process-section, .testimonials-section, .cta-section, .faq-section {
+    .about-section, .services-section, .process-section, .testimonials-section, .cta-section, .faq-section  .results-section{
       padding: 4rem 1.25rem;
     }
     .services-grid,
+    .results-grid,
     .process-steps,
     .testimonials-grid,
     footer {
       grid-template-columns: 1fr;
     }
-    .results-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-    }
+     
     .result-img-card {
       width: 100%;
       height: 100%;
