@@ -339,11 +339,8 @@
   padding: 2rem 7rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  gap: 4rem;
+  overflow: hidden;
 }
 
 .manifesto-strip p {
@@ -353,11 +350,6 @@
   color: var(--gold-light);
   white-space: nowrap;
   flex-shrink: 0;
-  scroll-snap-align: center;
-  padding: 0.45rem 1rem;
-  border: 1px solid rgba(201, 169, 110, 0.35);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
 }
 
   .manifesto-divider {
@@ -935,12 +927,8 @@
 .trust-logos {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
   .trust-logo-item {
@@ -958,12 +946,6 @@
   text-transform: uppercase;
   color: var(--charcoal-mid);
   font-weight: 500;
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  border: 1px solid rgba(201, 169, 110, 0.28);
-  border-radius: 999px;
-  padding: 0.38rem 0.7rem;
-  background: rgba(255, 255, 255, 0.5);
   white-space: nowrap;
 }
 
